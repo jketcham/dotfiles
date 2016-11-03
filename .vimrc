@@ -1,4 +1,5 @@
 set nocompatible
+set cursorline
 
 set encoding=utf-8
 set nomodeline
@@ -6,16 +7,21 @@ set nomodeline
 set undodir^=~/.vimtemp/undo
 set backupdir^=~/.vimtemp/backup
 set directory^=~/.vimtemp/temp
-
 set nobackup
 set noswapfile
+
 set incsearch
+
 set wildmenu
+
 set autoread
 set autowrite
+
 set ttyfast
 set mouse=a
+
 syntax on
+
 set scrolloff=3
 set wrap
 set nu
@@ -27,6 +33,7 @@ set shiftwidth=2
 " case sensitive with capital letter
 set ignorecase
 set smartcase
+
 set colorcolumn=80
 
 execute pathogen#infect()
@@ -50,6 +57,7 @@ nnoremap + :resize +5<cr>
 noremap Y y$
 
 inoremap jk <Esc>
+
 
 " 'unbind' K which opens manpages for word under cursor
 map <S-k> <Nop>
