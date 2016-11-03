@@ -70,3 +70,11 @@ imap <c-s> <Esc><c-s>
 nmap n nzz
 nmap N Nzz
 
+" fonts and other styling options
+colorscheme base16-solarized-dark
+
+" airline options
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='base16_solarized'
+set laststatus=2
+
