@@ -45,7 +45,7 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
-" resize current buffer by +/- 5 
+" resize current buffer by +/- 5
 nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
 " " Think of mapping that doesn't conflict
@@ -95,3 +95,5 @@ set rtp+=/usr/local/opt/fzf
 map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
 map <F3> :source ~/.vim_session <cr>     " And load session with F3
 
+" better whitespace
+autocmd BufWritePre * StripWhitespace
