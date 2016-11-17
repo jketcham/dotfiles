@@ -36,6 +36,11 @@ set smartcase
 
 set colorcolumn=80
 
+" set shell to zsh
+if executable('zsh')
+  set shell=zsh
+endif
+
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -73,6 +78,10 @@ nmap N Nzz
 " fonts and other styling options
 colorscheme base16-solarized-dark
 
+" create/load session
+map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
+map <F3> :source ~/.vim_session <cr>     " And load session with F3
+
 " airline options
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_solarized'
@@ -91,9 +100,15 @@ let g:jsx_ext_required = 0
 " vim fzf
 set rtp+=/usr/local/opt/fzf
 
-" create/load session
-map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
-map <F3> :source ~/.vim_session <cr>     " And load session with F3
-
 " better whitespace
 autocmd BufWritePre * StripWhitespace
+
+" syntastic options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
