@@ -87,10 +87,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_solarized'
 set laststatus=2
 
-" vim-flake8 options
-" run flake8 when writing python file
-autocmd BufWritePost *.py call Flake8()
-
 " vim-javascript options
 let g:javascript_plugin_jsdoc = 1
 
