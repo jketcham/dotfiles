@@ -52,3 +52,9 @@
 [submodule ".vim/bundle/vim-better-whitespace"]
 	path = .vim/bundle/vim-better-whitespace
 	url = git://github.com/ntpeters/vim-better-whitespace.git
+[submodule "syntastic"]
+	path = syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
