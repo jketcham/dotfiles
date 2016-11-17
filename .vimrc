@@ -53,9 +53,8 @@ noremap <C-l> <C-w>l
 " resize current buffer by +/- 5
 nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
-" " Think of mapping that doesn't conflict
-" " nnoremap > :vertical resize -5<cr>
-" " nnoremap < :vertical resize +5<cr>
+nnoremap > :vertical resize -5<cr>
+nnoremap < :vertical resize +5<cr>
 
 " have Y behave analogously to D and C rather than to dd and cc which is
 " " already done by yy
@@ -107,3 +106,5 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
+
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
