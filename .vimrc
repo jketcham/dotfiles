@@ -13,6 +13,7 @@ set noswapfile
 set incsearch
 
 set wildmenu
+set wildignore+=*.pyc,*.dat
 
 set autoread
 set autowrite
@@ -36,6 +37,8 @@ set smartcase
 
 set colorcolumn=80
 
+let mapleader = ","
+
 " set shell to zsh
 if executable('zsh')
   set shell=zsh
@@ -45,6 +48,18 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+" mappings for buffer movement
+map <Leader>n :bn<cr>
+map <Leader>p :bp<cr>
+map <Leader>d :bd<cr>
+
+" mappings for copying to clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
+" navigate windows more easily
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
@@ -53,15 +68,14 @@ noremap <C-l> <C-w>l
 " resize current buffer by +/- 5
 nnoremap - :resize -5<cr>
 nnoremap + :resize +5<cr>
-nnoremap > :vertical resize -5<cr>
-nnoremap < :vertical resize +5<cr>
+" nnoremap > :vertical resize -5<cr>
+" nnoremap < :vertical resize +5<cr>
 
 " have Y behave analogously to D and C rather than to dd and cc which is
 " " already done by yy
 noremap Y y$
 
 inoremap jk <Esc>
-
 
 " 'unbind' K which opens manpages for word under cursor
 map <S-k> <Nop>
