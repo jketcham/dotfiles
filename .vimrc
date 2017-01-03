@@ -53,6 +53,12 @@ map <Leader>n :bn<cr>
 map <Leader>p :bp<cr>
 map <Leader>d :bd<cr>
 
+" open a new tab and search for something
+nmap <Leader>a :tab split<CR>:Ack ""<Left>
+
+" search for the word under the cursor in a new tab
+nmap <Leader>A :tab split<CR>:Ack <C-r><C-w><CR>
+
 " mappings for copying to clipboard
 noremap <Leader>y "*y
 noremap <Leader>p "*p
