@@ -92,6 +92,10 @@ source $ZSH/oh-my-zsh.sh
 # Set terminal
 TERM="xterm-256color"
 
+$ Set Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # nvm setup
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
