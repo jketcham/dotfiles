@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/jack/.oh-my-zsh
+export ZSH=/home/jack/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew osx sudo npm)
+plugins=(git git-extras brew osx sudo npm tmux)
 
 # User configuration
 
@@ -91,6 +91,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Set terminal
 TERM="xterm-256color"
+
+$ Set Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # nvm setup
 export NVM_DIR=~/.nvm
