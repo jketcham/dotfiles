@@ -14,6 +14,15 @@ URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
+!! some HiDPI settings
+Xcursor.size:           50
+Xft.autohint: 		      0
+Xft.lcdfilter: 		      lcddefault
+Xft.hintstyle: 		      hintfull
+Xft.hinting: 		        1
+Xft.antialias: 		      1
+Xft.rgba: 		          rgb
+
 !! Solarized Dark
 
 #define S_base03        #002b36
