@@ -2,6 +2,7 @@ set nocompatible
 set cursorline
 
 set encoding=utf-8
+set fileencoding=utf-8
 set nomodeline
 
 set undodir^=~/.vimtemp/undo
@@ -94,7 +95,8 @@ nmap n nzz
 nmap N Nzz
 
 " fonts and other styling options
-colorscheme base16-solarized-dark
+set background=dark
+colorscheme solarized
 
 " create/load session
 map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
