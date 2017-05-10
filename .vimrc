@@ -81,7 +81,6 @@ nnoremap + :resize +5<cr>
 " " already done by yy
 noremap Y y$
 
-inoremap jk <Esc>
 
 " 'unbind' K which opens manpages for word under cursor
 map <S-k> <Nop>
