@@ -37,6 +37,7 @@ set ignorecase
 set smartcase
 
 set colorcolumn=80
+autocmd FileType python set colorcolumn=100
 
 let mapleader = ","
 
@@ -129,5 +130,6 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_pylint_post_args="--max-line-length=100"
 
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
