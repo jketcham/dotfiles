@@ -49,18 +49,18 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras brew osx sudo npm tmux)
+plugins=(git git-extras sudo npm tmux)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/go/libexec/bin:/Users/jack/Go/bin"
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/go/libexec/bin:/Users/jack/Go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # add pg to path
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+# export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 
 # add anaconda
-export PATH=$PATH:/Users/jack/anaconda2/bin:/Users/jack/miniconda2/bin
+# export PATH=$PATH:/Users/jack/anaconda2/bin:/Users/jack/miniconda2/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,16 +89,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias sc="systemctl"
+
 # Set terminal
 TERM="xterm-256color"
 
-$ Set Base16 Shell
+# Set Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # nvm setup
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 # tmuxinator
 # source ~/.bin/tmuxinator.zsh
@@ -110,10 +112,10 @@ export GOROOT=/usr/local/opt/go/libexec
 # HiringSolved stuff
 export ROBO_ENV=development
 
-export WORKSPACE=$HOME/Workspaces
+export WORKSPACE=$HOME/workspaces
 
 # scala
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
