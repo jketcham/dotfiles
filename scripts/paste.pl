@@ -1,0 +1,7 @@
+#! perl
+sub on_sel_grab {
+  my $query = quotemeta $_[0]->selection;
+  $query =~ s/\n/\\n/g;
+  $query =~ s/\r/\\r/g;
+  system( "echo -en " . $query . " | xsel -ibp" );
+}
