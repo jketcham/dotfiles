@@ -37,6 +37,7 @@ set ignorecase
 set smartcase
 
 set colorcolumn=80
+autocmd FileType python set colorcolumn=100
 
 let mapleader = ","
 
@@ -119,6 +120,18 @@ let g:jsx_ext_required = 0
 " vim fzf
 set rtp+=/usr/local/opt/fzf
 
+" ctrlp-vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_working_path_mode = 'ra'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 " better whitespace
 autocmd BufWritePre * StripWhitespace
 
@@ -130,5 +143,6 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_pylint_post_args="--max-line-length=100"
 
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
