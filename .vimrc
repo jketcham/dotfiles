@@ -45,8 +45,9 @@ if executable('zsh')
   set shell=zsh
 endif
 
+" setup pathogen
 execute pathogen#infect()
-syntax on
+
 filetype plugin indent on
 
 " mappings for buffer movement
@@ -82,6 +83,8 @@ nnoremap + :resize +5<cr>
 " " already done by yy
 noremap Y y$
 
+" auto resize panes on vim resize
+autocmd VimResized * wincmd =
 
 " 'unbind' K which opens manpages for word under cursor
 map <S-k> <Nop>
@@ -94,9 +97,8 @@ imap <c-s> <Esc><c-s>
 nmap n nzz
 nmap N Nzz
 
-" fonts and other styling options
-set background=dark
-colorscheme solarized
+" turn on syntax highlighting
+syntax on
 
 " create/load session
 map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
