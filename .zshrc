@@ -49,10 +49,6 @@ alias sc="systemctl"
 # Set terminal
 TERM="xterm-256color"
 
-# Set Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-default.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # set editor
 export EDITOR=vim
 export SYSTEMD_EDITOR=/usr/bin/vim
