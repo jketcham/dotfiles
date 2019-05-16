@@ -36,7 +36,7 @@ set shiftwidth=2
 set ignorecase
 set smartcase
 
-set colorcolumn=80
+set colorcolumn=100
 highlight ColorColumn ctermbg=8
 autocmd FileType python set colorcolumn=100
 
