@@ -10,6 +10,7 @@ set backupdir^=~/.vimtemp/backup
 set directory^=~/.vimtemp/temp
 set nobackup
 set noswapfile
+set backspace=indent,eol,start
 
 set incsearch
 
@@ -24,6 +25,7 @@ set mouse=a
 
 syntax on
 
+set nocp
 set scrolloff=3
 set wrap
 set nu
