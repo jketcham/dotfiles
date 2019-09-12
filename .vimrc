@@ -10,6 +10,7 @@ set backupdir^=~/.vimtemp/backup
 set directory^=~/.vimtemp/temp
 set nobackup
 set noswapfile
+set backspace=indent,eol,start
 
 set incsearch
 
@@ -24,6 +25,7 @@ set mouse=a
 
 syntax on
 
+set nocp
 set scrolloff=3
 set wrap
 set nu
@@ -36,6 +38,7 @@ set shiftwidth=2
 set ignorecase
 set smartcase
 
+set background=dark
 set colorcolumn=100
 highlight ColorColumn ctermbg=8
 autocmd FileType python set colorcolumn=100
@@ -108,7 +111,7 @@ map <F3> :source ~/.vim_session <cr>     " And load session with F3
 
 " airline options
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='dracula'
+let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
