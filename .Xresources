@@ -43,3 +43,8 @@ Xft.dpi:                90
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+
+ URxvt.tabbed.tabbar-fg: <colour-index, default 3>
+ URxvt.tabbed.tabbar-bg: <colour-index, default 0>
+ URxvt.tabbed.tab-fg:    <colour-index, default 0>
+ URxvt.tabbed.tab-bg:    <colour-index, default 1>
