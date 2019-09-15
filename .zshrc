@@ -46,6 +46,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias sc="systemctl"
 
+alias pkr='gpg-connect-agent "scd serialno" "learn --force" /bye'
+
 # Set terminal
 TERM="xterm-256color"
 
