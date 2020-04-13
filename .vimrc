@@ -15,7 +15,7 @@ set backspace=indent,eol,start
 set incsearch
 
 set wildmenu
-set wildignore+=*.pyc,*.dat
+set wildignore+=*.pyc,*.dat,*.DS_Store
 
 set autoread
 set autowrite
