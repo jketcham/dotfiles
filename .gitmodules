@@ -79,6 +79,3 @@
 [submodule ".vim/bundle/vim-AdvancedSorters"]
 	path = .vim/bundle/vim-AdvancedSorters
 	url = git@github.com:inkarkat/vim-AdvancedSorters.git
-[submodule ".vim/bundle/auto-pairs"]
-	path = .vim/bundle/auto-pairs
-	url = git@github.com:jiangmiao/auto-pairs.git
