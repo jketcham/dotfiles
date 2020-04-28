@@ -49,9 +49,6 @@
 [submodule "syntastic"]
 	path = syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/bundle/VimCompletesMe"]
 	path = .vim/bundle/VimCompletesMe
 	url = git://github.com/ajh17/VimCompletesMe.git
