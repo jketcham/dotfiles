@@ -23,8 +23,6 @@ set autowrite
 set ttyfast
 set mouse=a
 
-syntax on
-
 set nocp
 set scrolloff=3
 set wrap
@@ -113,6 +111,10 @@ map <F3> :source ~/.vim_session <cr>     " And load session with F3
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
+
+" Airline integration with ALE
+let g:airline#extensions#ale#enabled = 1
+
 set laststatus=2
 
 " vim-javascript options
@@ -139,5 +141,16 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " better whitespace
 autocmd BufWritePre * StripWhitespace
 
+map S :SortByWidth
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
+call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+call plug#end()
