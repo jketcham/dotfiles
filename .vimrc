@@ -36,6 +36,8 @@ set shiftwidth=2
 set ignorecase
 set smartcase
 
+set completeopt=menu,menuone,preview,noselect,noinsert
+
 set background=dark
 set colorcolumn=100
 highlight ColorColumn ctermbg=8
@@ -143,6 +145,19 @@ autocmd BufWritePre * StripWhitespace
 
 map S :SortByWidth
 
+:nmap ]a :ALENextWrap<CR>
+:nmap [a :ALEPreviousWrap<CR>
+:nmap ]A :ALELast
+:nmap [A :ALEFirst
+
+let g:ale_open_list = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_completion_tsserver_autoimport = 1
+let g:ale_completion_enabled = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -151,6 +166,10 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
