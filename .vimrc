@@ -157,6 +157,14 @@ let g:ale_completion_tsserver_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
+let g:ale_linters_explicit = 1
+let g:ale_linters = {
+  \ 'javascript': ['eslint', 'flow'],
+  \ 'javascriptreact': ['eslint', 'flow'],
+  \ 'javascript.jsx': ['eslint', 'flow'],
+  \ 'typescript': ['eslint', 'tsserver'],
+  \ 'typescript.tsx': ['eslint', 'tsserver']
+  \ }
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -168,8 +176,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'dense-analysis/ale'
 
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'leafgarland/typescript-vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'hashivim/vim-terraform'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'digitaltoad/vim-pug'
 call plug#end()
+
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.jsx set filetype=javascriptreact
