@@ -59,15 +59,6 @@ export SYSTEMD_EDITOR=/usr/bin/vim
 export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
 
-# HiringSolved stuff
-export ROBO_ENV=development
-
-export WORKSPACE=$HOME/workspaces
-
-# scala
-export SCALA_HOME=/usr/local/share/scala
-export PATH=$PATH:$SCALA_HOME/bin
-
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # source /usr/share/nvm/init-nvm.sh
 
