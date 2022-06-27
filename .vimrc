@@ -50,9 +50,6 @@ if executable('zsh')
   set shell=zsh
 endif
 
-" setup pathogen
-execute pathogen#infect()
-
 filetype plugin indent on
 
 " mappings for buffer movement
@@ -183,6 +180,20 @@ Plug 'hashivim/vim-terraform'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'digitaltoad/vim-pug'
+
+Plug 'mileszs/ack.vim'
+Plug 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-vinegar'
+Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
