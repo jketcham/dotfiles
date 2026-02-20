@@ -64,6 +64,15 @@ export GOROOT=/usr/local/opt/go/libexec
 
 export PATH=$PATH:$HOME/.local/bin
 
+# Shift+Enter inserts a newline instead of executing
+# Works with iTerm2 key mapping (Shift+Return → Send Escape Sequence → [13;2u)
+# and tmux extended-keys + S-Enter bind in .tmux.conf
+function insert-newline() {
+  LBUFFER+=$'\n'
+}
+zle -N insert-newline
+bindkey '\e[13;2u' insert-newline
+
 # gpg agent
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
