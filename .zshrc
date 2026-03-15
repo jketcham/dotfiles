@@ -5,7 +5,8 @@ export ZSH=/home/jack/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# Disable oh-my-zsh theme (starship handles the prompt)
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -41,6 +42,9 @@ plugins=(git git-extras sudo npm tmux)
 
 source $ZSH/oh-my-zsh.sh
 
+# Starship prompt (replaces oh-my-zsh theme + timestamp)
+eval "$(starship init zsh)"
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
@@ -48,12 +52,9 @@ alias sc="systemctl"
 
 alias pkr='gpg-connect-agent "scd serialno" "learn --force" /bye'
 
-# Set terminal
-TERM="xterm-256color"
-
 # set editor
-export EDITOR=vim
-export SYSTEMD_EDITOR=/usr/bin/vim
+export EDITOR=nvim
+alias vim=nvim
 
 # Go stuff
 export GOPATH=$HOME/Go

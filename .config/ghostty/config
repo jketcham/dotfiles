@@ -1,0 +1,30 @@
+font-size = 14
+
+theme = Catppuccin Frappe
+
+window-padding-x = 4
+window-padding-y = 4
+
+confirm-close-surface = false
+copy-on-select = clipboard
+
+macos-option-as-alt = true
+
+# Splits - create (iTerm2-style)
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
+
+# Splits - navigate (Ctrl+Shift + hjkl)
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+l=goto_split:right
+
+# Splits - resize
+keybind = cmd+ctrl+h=resize_split:left,20
+keybind = cmd+ctrl+j=resize_split:down,20
+keybind = cmd+ctrl+k=resize_split:up,20
+keybind = cmd+ctrl+l=resize_split:right,20
+
+# Close split
+keybind = cmd+w=close_surface
