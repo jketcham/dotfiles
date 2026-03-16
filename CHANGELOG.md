@@ -9,4 +9,5 @@
 
 ### Changed
 - `.tmux.conf`: added `xterm-ghostty` terminal overrides for true color, changed `vim` references to `nvim`
-- `~/.zshrc`: set `EDITOR=nvim`, added `alias vim=nvim`, added starship prompt init, disabled oh-my-zsh theme, removed `TERM=xterm-256color` override
+- `.zshrc`: set `EDITOR=nvim`, added `alias vim=nvim`, added starship prompt init, disabled oh-my-zsh theme, removed `TERM=xterm-256color` override
+- `.zshrc`: replaced nvm with mise for Node.js version management (auto-switches on `cd` via `.nvmrc` files)
